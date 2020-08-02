@@ -15,3 +15,5 @@ Imports:
     htmltools
 URL: https://github.com/tyluRp/hover
 BugReports: https://github.com/tyluRp/hover/issues
+Suggests: 
+    testthat
