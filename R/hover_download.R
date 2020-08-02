@@ -46,7 +46,7 @@
 #' @export
 hover_download <- function(outputId, label = "Download", button_animation = NULL,
                            icon_animation = NULL, class = NULL, ...) {
-  aTag <- tags$a(
+  aTag <- shiny::tags$a(
     id = outputId,
     class = paste('btn btn-default shiny-download-link', class),
     class = if (!is.null(button_animation)) paste0("hvr-", button_animation),
