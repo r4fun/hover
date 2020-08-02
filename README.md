@@ -52,5 +52,10 @@ code and applies the necessary Hover.css classes to make things move.
 
 ## Acknowledgements
 
-  - [Hover.css](https://github.com/IanLunn/Hover)
-  - [shiny](https://github.com/rstudio/shiny)
+This package was built using the following tools:
+
+  - [Hover.css](https://github.com/IanLunn/Hover), the underlying CSS
+  - [shiny](https://github.com/rstudio/shiny), the source code for
+    `hover_button`
+
+Without these, this package wouldn’t have been possible.
