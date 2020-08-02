@@ -13,3 +13,5 @@ RoxygenNote: 7.1.1
 Imports: 
     shiny,
     htmltools
+URL: https://github.com/tyluRp/hover
+BugReports: https://github.com/tyluRp/hover/issues
