@@ -30,7 +30,7 @@ hover_download(
 \item{...}{Other arguments to pass to the container tag function.}
 }
 \description{
-Animate an downloadButton and it's icon using
+Animate a downloadButton and it's icon using
 \href{https://github.com/IanLunn/Hover}{Hover.css}
 }
 \examples{

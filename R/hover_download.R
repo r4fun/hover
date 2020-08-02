@@ -1,6 +1,6 @@
 #' Download button with button and icon animations
 #'
-#' Animate an downloadButton and it's icon using
+#' Animate a downloadButton and it's icon using
 #' [Hover.css](https://github.com/IanLunn/Hover)
 #'
 #' @source <https://github.com/IanLunn/Hover>
