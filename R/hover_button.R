@@ -40,10 +40,10 @@ hover_button <- function(inputId, label, icon = NULL, button_animation = NULL, i
   value <- shiny::restoreInput(id = inputId, default = NULL)
 
   if (!is.null(icon)) {
-    icon <- shiny:::validateIcon(htmltools::tagAppendAttributes(icon, class = "hvr-icon"))
+    icon <- validateIcon(htmltools::tagAppendAttributes(icon, class = "hvr-icon"))
   }
 
-  tags$button(
+  shiny::tags$button(
     id = inputId,
     style = if (!is.null(width)) paste0("width: ", shiny::validateCssUnit(width), ";"),
     type = "button",
@@ -54,4 +54,16 @@ hover_button <- function(inputId, label, icon = NULL, button_animation = NULL, i
     list(icon, label),
     ...
   )
+}
+
+validateIcon <- function (icon) {
+  if (is.null(icon) || identical(icon, character(0))) {
+    return(icon)
+  }
+  else if (inherits(icon, "shiny.tag") && icon$name == "i") {
+    return(icon)
+  }
+  else {
+    stop("Invalid icon. Use Shiny's 'icon()' function to generate a valid icon")
+  }
 }
