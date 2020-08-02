@@ -7,6 +7,8 @@
 
 [![R build
 status](https://github.com/tyluRp/hover/workflows/R-CMD-check/badge.svg)](https://github.com/tyluRp/hover/actions)
+[![Codecov test
+coverage](https://codecov.io/gh/tyluRp/hover/branch/master/graph/badge.svg)](https://codecov.io/gh/tyluRp/hover?branch=master)
 <!-- badges: end -->
 
 The goal of hover is to add animations to `shiny::actionButton`,
