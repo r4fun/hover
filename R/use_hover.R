@@ -2,6 +2,9 @@
 #'
 #' @description Enables hover by including the CSS file necessary for the
 #' animations.
+#' @details By default, shiny buttons don't 'pop back'. This is for accessibility
+#' reasons. For more information see here: https://github.com/rstudio/shiny/issues/2500.
+#' @param popback If true, buttons 'pop back', contrary to default shiny behavior.
 #' @examples
 #' if (interactive()) {
 #'   library(shiny)
@@ -26,7 +29,16 @@
 #' }
 #' @export
 #' @export
-use_hover <- function() {
+use_hover <- function(popback = TRUE) {
   css <- system.file("extdata", "hover-min.css", package = "hover")
-  shiny::includeCSS(css)
+  js <- system.file("extdata", "pop-back.js", package = "hover")
+
+  if (popback) {
+    list(
+      shiny::includeCSS(css),
+      shiny::includeScript(js)
+    )
+  } else {
+    shiny::includeCSS(css)
+  }
 }

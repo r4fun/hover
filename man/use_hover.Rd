@@ -4,11 +4,18 @@
 \alias{use_hover}
 \title{Use the hover package}
 \usage{
-use_hover()
+use_hover(popback = TRUE)
+}
+\arguments{
+\item{popback}{If true, buttons 'pop back', contrary to default shiny behavior.}
 }
 \description{
 Enables hover by including the CSS file necessary for the
 animations.
+}
+\details{
+By default, shiny buttons don't 'pop back'. This is for accessibility
+reasons. For more information see here: https://github.com/rstudio/shiny/issues/2500.
 }
 \examples{
 if (interactive()) {
