@@ -28,7 +28,7 @@ You can install the development version of hover from GitHub with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("tylurp/hover")
+devtools::install_github("r4fun/hover")
 ```
 
 ## Example
