@@ -119,9 +119,21 @@ animations." />
 animations.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>use_hover</span>()</pre>
+    <pre class="usage"><span class='fu'>use_hover</span>(<span class='kw'>popback</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>popback</th>
+      <td><p>If true, buttons 'pop back', contrary to default shiny behavior.</p></td>
+    </tr>
+    </table>
 
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>By default, shiny buttons don't 'pop back'. This is for accessibility
+reasons. For more information see here: https://github.com/rstudio/shiny/issues/2500.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
