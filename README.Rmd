@@ -33,7 +33,7 @@ devtools::install_github("r4fun/hover")
 
 ## Example
 
-Animate a button and icon is as simple as providing the animation name:
+Animate a button and icon by providing the animation name:
 
 ```r
 library(shiny)
