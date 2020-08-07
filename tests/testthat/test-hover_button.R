@@ -1,9 +1,9 @@
-test_that("hover_button accepts class arguments", {
+test_that("hover_action_button accepts class arguments", {
   make_button <- function(class) {
     if (missing(class)) {
-      hover_button("id", "label")
+      hover_action_button("id", "label")
     } else {
-      hover_button("id", "label", class = class)
+      hover_action_button("id", "label", class = class)
     }
   }
   act <- make_button()

@@ -18,7 +18,7 @@
 #'
 #'   ui <- fluidPage(
 #'     use_hover(),
-#'     hover_download(
+#'     hover_download_button(
 #'       outputId = "downloadData",
 #'       label = "Download",
 #'       button_animation = "rotate",
@@ -44,7 +44,7 @@
 #' }
 #' @md
 #' @export
-hover_download <- function(outputId, label = "Download", button_animation = NULL,
+hover_download_button <- function(outputId, label = "Download", button_animation = NULL,
                            icon_animation = NULL, class = NULL, ...) {
   aTag <- shiny::tags$a(
     id = outputId,

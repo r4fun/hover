@@ -20,7 +20,7 @@
 #'
 #'   ui <- fluidPage(
 #'     use_hover(),
-#'     hover_button(
+#'     hover_action_button(
 #'       inputId = "btn",
 #'       label = "hello hover!",
 #'       icon = icon("refresh"),
@@ -36,7 +36,7 @@
 #'   shinyApp(ui, server)
 #' }
 #' @export
-hover_button <- function(inputId, label, icon = NULL, button_animation = NULL, icon_animation = NULL, width = NULL, ...) {
+hover_action_button <- function(inputId, label, icon = NULL, button_animation = NULL, icon_animation = NULL, width = NULL, ...) {
   value <- shiny::restoreInput(id = inputId, default = NULL)
 
   if (!is.null(icon)) {

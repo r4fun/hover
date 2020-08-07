@@ -12,7 +12,7 @@
 #'
 #'   ui <- fluidPage(
 #'     use_hover(),
-#'     hover_button(
+#'     hover_action_button(
 #'       inputId = "btn",
 #'       label = "hello hover!",
 #'       icon = icon("refresh"),
