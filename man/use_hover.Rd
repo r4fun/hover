@@ -4,7 +4,7 @@
 \alias{use_hover}
 \title{Use the hover package}
 \usage{
-use_hover(popback = TRUE)
+use_hover(popback = FALSE)
 }
 \arguments{
 \item{popback}{If true, buttons 'pop back', contrary to default shiny behavior.}

@@ -29,7 +29,7 @@
 #' }
 #' @export
 #' @export
-use_hover <- function(popback = TRUE) {
+use_hover <- function(popback = FALSE) {
   css <- system.file("extdata", "hover-min.css", package = "hover")
   js <- system.file("extdata", "pop-back.js", package = "hover")
 
