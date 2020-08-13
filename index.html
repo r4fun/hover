@@ -53,7 +53,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/tyluRp/hover/">
+  <a href="https://github.com/r4fun/hover/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -80,32 +80,32 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the development version of hover from GitHub with:</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="co"># install.packages("devtools")</span>
-<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu">install_github</span>(<span class="st">"r4fun/hover"</span>)</pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># install.packages("devtools")</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"r4fun/hover"</span>)</span></code></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
 <p>Animate a button and icon by providing the animation name:</p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">shiny</span>)
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">hover</span>)
-
-<span class="no">ui</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://shiny.rstudio.com/reference/shiny/latest/fluidPage.html">fluidPage</a></span>(
-  <span class="fu"><a href="reference/use_hover.html">use_hover</a></span>(),
-  <span class="fu"><a href="reference/hover_action_button.html">hover_action_button</a></span>(
-    <span class="kw">inputId</span> <span class="kw">=</span> <span class="st">"btn"</span>,
-    <span class="kw">label</span> <span class="kw">=</span> <span class="st">"hello hover!"</span>,
-    <span class="kw">icon</span> <span class="kw">=</span> <span class="fu"><a href="https://shiny.rstudio.com/reference/shiny/latest/icon.html">icon</a></span>(<span class="st">"refresh"</span>),
-    <span class="kw">button_animation</span> <span class="kw">=</span> <span class="st">"rotate"</span>,
-    <span class="kw">icon_animation</span> <span class="kw">=</span> <span class="st">"spin"</span>
-  )
-)
-
-<span class="no">server</span> <span class="kw">&lt;-</span> <span class="kw">function</span>(<span class="no">input</span>, <span class="no">output</span>, <span class="no">session</span>) {
-
-}
-
-<span class="fu"><a href="https://shiny.rstudio.com/reference/shiny/latest/shinyApp.html">shinyApp</a></span>(<span class="no">ui</span>, <span class="no">server</span>)</pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">library</span>(shiny)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">library</span>(hover)</span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
+<span id="cb2-5"><a href="#cb2-5"></a>  <span class="kw">use_hover</span>(),</span>
+<span id="cb2-6"><a href="#cb2-6"></a>  <span class="kw">hover_action_button</span>(</span>
+<span id="cb2-7"><a href="#cb2-7"></a>    <span class="dt">inputId =</span> <span class="st">"btn"</span>,</span>
+<span id="cb2-8"><a href="#cb2-8"></a>    <span class="dt">label =</span> <span class="st">"hello hover!"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9"></a>    <span class="dt">icon =</span> <span class="kw">icon</span>(<span class="st">"refresh"</span>), </span>
+<span id="cb2-10"><a href="#cb2-10"></a>    <span class="dt">button_animation =</span> <span class="st">"rotate"</span>, </span>
+<span id="cb2-11"><a href="#cb2-11"></a>    <span class="dt">icon_animation =</span> <span class="st">"spin"</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a>  ) </span>
+<span id="cb2-13"><a href="#cb2-13"></a>)</span>
+<span id="cb2-14"><a href="#cb2-14"></a></span>
+<span id="cb2-15"><a href="#cb2-15"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
+<span id="cb2-16"><a href="#cb2-16"></a>  </span>
+<span id="cb2-17"><a href="#cb2-17"></a>}</span>
+<span id="cb2-18"><a href="#cb2-18"></a></span>
+<span id="cb2-19"><a href="#cb2-19"></a><span class="kw">shinyApp</span>(ui, server)</span></code></pre></div>
 <p>The <code>hover</code> package essentially takes the <code><a href="https://shiny.rstudio.com/reference/shiny/latest/actionButton.html">shiny::actionButton</a></code> source code and applies the necessary Hover.css classes to make things move.</p>
 </div>
 <div id="acknowledgements" class="section level2">
@@ -128,9 +128,9 @@
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/tyluRp/hover/">https://​github.com/​tyluRp/​hover/​</a>
+<li>Browse source code at <br><a href="https://github.com/r4fun/hover/">https://​github.com/​r4fun/​hover/​</a>
 </li>
-<li>Report a bug at <br><a href="https://github.com/tyluRp/hover/issues">https://​github.com/​tyluRp/​hover/​issues</a>
+<li>Report a bug at <br><a href="https://github.com/r4fun/hover/issues">https://​github.com/​r4fun/​hover/​issues</a>
 </li>
 </ul>
 </div>
@@ -153,8 +153,8 @@
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/tyluRp/hover/actions"><img src="https://github.com/tyluRp/hover/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
-<li><a href="https://codecov.io/gh/tyluRp/hover?branch=master"><img src="https://codecov.io/gh/tyluRp/hover/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://github.com/r4fun/hover/actions"><img src="https://github.com/r4fun/hover/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://codecov.io/gh/r4fun/hover?branch=master"><img src="https://codecov.io/gh/r4fun/hover/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 </ul>
 </div>
 </div>
