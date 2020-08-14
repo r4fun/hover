@@ -1,7 +1,7 @@
-context("Test for three components in the button. Type is a 'button'.",
-        "'onClick' is present in the list. Javascript code is present")
+context("Reload functionality")
 
-test_that("hover_reload_button has reload functionality", {
+test_that("Test for three components in the button. Type is a 'button'.",
+          "'onClick' is present in the list. Javascript code is present", {
 
   # Create testing input
   test_me <- hover_reload_button("id", "label")
