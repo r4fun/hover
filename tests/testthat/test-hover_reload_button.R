@@ -1,3 +1,6 @@
+context("Test for three components in the button. Type is a 'button'.",
+        "'onClick' is present in the list. Javascript code is present")
+
 test_that("hover_reload_button has reload functionality", {
 
   # Create testing input
