@@ -1,7 +1,9 @@
 #' Reload button with button and icon animations
 #'
-#' Animate a reloadButton and it's icon using
+#' Animate a reload button and it's icon using
 #' [Hover.css](https://github.com/IanLunn/Hover)
+#' Note that a reload button is just a shiny::actionButton
+#' with onClick behavior to reload or refresh a web browser.
 #'
 #' @source <https://github.com/IanLunn/Hover>
 #'
@@ -55,16 +57,4 @@ hover_reload_button <- function(inputId, label, icon = NULL, button_animation = 
     onClick = "location.reload();",
     ...
   )
-}
-
-validateIcon <- function (icon) {
-  if (is.null(icon) || identical(icon, character(0))) {
-    return(icon)
-  }
-  else if (inherits(icon, "shiny.tag") && icon$name == "i") {
-    return(icon)
-  }
-  else {
-    stop("Invalid icon. Use Shiny's 'icon()' function to generate a valid icon")
-  }
 }

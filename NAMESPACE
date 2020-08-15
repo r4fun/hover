@@ -2,4 +2,5 @@
 
 export(hover_action_button)
 export(hover_download_button)
+export(hover_reload_button)
 export(use_hover)

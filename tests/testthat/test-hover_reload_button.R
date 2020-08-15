@@ -1,13 +1,10 @@
-context("Reload functionality")
-
-test_that("Test for three components in the button. Type is a 'button'.",
-          "'onClick' is present in the list. Javascript code is present", {
+test_that("hover_reload_button has expected structure", {
 
   # Create testing input
   test_me <- hover_reload_button("id", "label")
 
   # Test 1: attribs type is a button
-  expect_match(
+  expect_equal(
     ## actual
     test_me$attribs$type,
     ## expect
@@ -15,19 +12,13 @@ test_that("Test for three components in the button. Type is a 'button'.",
   )
 
   # Test 2: names on attribs list contains onClick
-  expect_match(
-    ## actual
-    paste(unique(names(test_me$attribs)),
-          collapse = ", "),
-    ## expect
-    "onClick"
-  )
+  expect_true(any("onClick" %in% names(test_me$attribs)))
 
   # Test 3: Look for javascript command
-  expect_match(
+  expect_equal(
     ## actual
     test_me$attribs$onClick,
-    ## expect "location.reload();", escaped characters are present.
-    "location\\.reload\\(\\);"
+    ## expect
+    "location.reload();"
   )
 })
