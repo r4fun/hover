@@ -21,7 +21,7 @@ hover_action_button(inputId, label, icon = NULL,
 
 \item{icon_animation}{The name of the icon animation.}
 
-\item{width}{The width of the input, e.g. '400px', or '100%'; see validateCssUnit().}
+\item{width}{The width of the input, e.g. '400px', or '100 percent'; see validateCssUnit().}
 
 \item{...}{Named attributes to be applied to the button or link.}
 }
