@@ -126,8 +126,15 @@ Note that a reload button is just a shiny::actionButton
 with onClick behavior to reload or refresh a web browser.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>hover_reload_button</span>(<span class='no'>inputId</span>, <span class='no'>label</span>, <span class='kw'>icon</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>button_animation</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>icon_animation</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>hover_reload_button</span>(
+  <span class='no'>inputId</span>,
+  <span class='no'>label</span>,
+  <span class='kw'>icon</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>button_animation</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>icon_animation</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='no'>...</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -154,7 +161,7 @@ with onClick behavior to reload or refresh a web browser.</p>
     </tr>
     <tr>
       <th>width</th>
-      <td><p>The width of the input, e.g. '400px', or '100 percent'; see validateCssUnit().</p></td>
+      <td><p>The width of the input, e.g. '400px', or '100%'; see validateCssUnit().</p></td>
     </tr>
     <tr>
       <th>...</th>
