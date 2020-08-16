@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Action button with button and icon animations — hover_action_button • hover</title>
+<title>Reload button with button and icon animations — hover_reload_button • hover</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,11 @@
 
 
 
-<meta property="og:title" content="Action button with button and icon animations — hover_action_button" />
-<meta property="og:description" content="Animate an actionButton and it's icon using
-Hover.css" />
+<meta property="og:title" content="Reload button with button and icon animations — hover_reload_button" />
+<meta property="og:description" content="Animate a reload button and it's icon using
+Hover.css
+Note that a reload button is just a shiny::actionButton
+with onClick behavior to reload or refresh a web browser." />
 
 
 
@@ -112,17 +114,19 @@ Hover.css" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Action button with button and icon animations</h1>
-    <small class="dont-index">Source: <a href='https://github.com/r4fun/hover/blob/master/R/hover_action_button.R'><code>R/hover_action_button.R</code></a></small>
-    <div class="hidden name"><code>hover_action_button.Rd</code></div>
+    <h1>Reload button with button and icon animations</h1>
+    <small class="dont-index">Source: <a href='https://github.com/r4fun/hover/blob/master/R/hover_reload_button.R'><code>R/hover_reload_button.R</code></a></small>
+    <div class="hidden name"><code>hover_reload_button.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Animate an actionButton and it's icon using
-<a href='https://github.com/IanLunn/Hover'>Hover.css</a></p>
+    <p>Animate a reload button and it's icon using
+<a href='https://github.com/IanLunn/Hover'>Hover.css</a>
+Note that a reload button is just a shiny::actionButton
+with onClick behavior to reload or refresh a web browser.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>hover_action_button</span>(<span class='no'>inputId</span>, <span class='no'>label</span>, <span class='kw'>icon</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+    <pre class="usage"><span class='fu'>hover_reload_button</span>(<span class='no'>inputId</span>, <span class='no'>label</span>, <span class='kw'>icon</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>button_animation</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>icon_animation</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -169,7 +173,7 @@ Hover.css" />
 
   <span class='no'>ui</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://shiny.rstudio.com/reference/shiny/latest/fluidPage.html'>fluidPage</a></span>(
     <span class='fu'><a href='use_hover.html'>use_hover</a></span>(),
-    <span class='fu'>hover_action_button</span>(
+    <span class='fu'>hover_reload_button</span>(
       <span class='kw'>inputId</span> <span class='kw'>=</span> <span class='st'>"btn"</span>,
       <span class='kw'>label</span> <span class='kw'>=</span> <span class='st'>"hello hover!"</span>,
       <span class='kw'>icon</span> <span class='kw'>=</span> <span class='fu'><a href='https://shiny.rstudio.com/reference/shiny/latest/icon.html'>icon</a></span>(<span class='st'>"refresh"</span>),
