@@ -1,7 +1,9 @@
-#' Action button with button and icon animations
+#' Reload button with button and icon animations
 #'
-#' Animate an actionButton and it's icon using
+#' Animate a reload button and it's icon using
 #' [Hover.css](https://github.com/IanLunn/Hover)
+#' Note that a reload button is just a shiny::actionButton
+#' with onClick behavior to reload or refresh a web browser.
 #'
 #' @source <https://github.com/IanLunn/Hover>
 #'
@@ -20,7 +22,7 @@
 #'
 #'   ui <- fluidPage(
 #'     use_hover(),
-#'     hover_action_button(
+#'     hover_reload_button(
 #'       inputId = "btn",
 #'       label = "hello hover!",
 #'       icon = icon("refresh"),
@@ -36,7 +38,7 @@
 #'   shinyApp(ui, server)
 #' }
 #' @export
-hover_action_button <- function(inputId, label, icon = NULL, button_animation = NULL, icon_animation = NULL, width = NULL, ...) {
+hover_reload_button <- function(inputId, label, icon = NULL, button_animation = NULL, icon_animation = NULL, width = NULL, ...) {
   value <- shiny::restoreInput(id = inputId, default = NULL)
 
   if (!is.null(icon)) {
@@ -47,11 +49,12 @@ hover_action_button <- function(inputId, label, icon = NULL, button_animation = 
     id = inputId,
     style = if (!is.null(width)) paste0("width: ", shiny::validateCssUnit(width), ";"),
     type = "button",
-    class = "btn btn-default action-button",
+    class = "btn btn-default reload-button",
     class = if (!is.null(button_animation)) paste0("hvr-", button_animation),
     class = if (!is.null(icon_animation)) paste0("hvr-icon-", icon_animation),
     `data-val` = value,
     list(icon, label),
+    onClick = "location.reload();",
     ...
   )
 }
