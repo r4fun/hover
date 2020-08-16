@@ -10,7 +10,7 @@
 #' @param icon An optional icon() to appear on the button.
 #' @param button_animation The name of the button animation.
 #' @param icon_animation The name of the icon animation.
-#' @param width The width of the input, e.g. '400px', or '100 percent'; see validateCssUnit().
+#' @param width The width of the input, e.g. '400px', or '100%'; see validateCssUnit().
 #' @param ... Named attributes to be applied to the button or link.
 #' @md
 #' @examples

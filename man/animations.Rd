@@ -4,7 +4,9 @@
 \name{animations}
 \alias{animations}
 \title{List of all available animations}
-\format{An object of class \code{list} of length 7.}
+\format{
+An object of class \code{list} of length 7.
+}
 \usage{
 animations
 }

@@ -7,8 +7,14 @@
 \url{https://github.com/IanLunn/Hover}
 }
 \usage{
-hover_download_button(outputId, label = "Download",
-  button_animation = NULL, icon_animation = NULL, class = NULL, ...)
+hover_download_button(
+  outputId,
+  label = "Download",
+  button_animation = NULL,
+  icon_animation = NULL,
+  class = NULL,
+  ...
+)
 }
 \arguments{
 \item{outputId}{The name of the output slot that the downloadHandler is assigned to.}

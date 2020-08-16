@@ -7,8 +7,15 @@
 \url{https://github.com/IanLunn/Hover}
 }
 \usage{
-hover_reload_button(inputId, label, icon = NULL,
-  button_animation = NULL, icon_animation = NULL, width = NULL, ...)
+hover_reload_button(
+  inputId,
+  label,
+  icon = NULL,
+  button_animation = NULL,
+  icon_animation = NULL,
+  width = NULL,
+  ...
+)
 }
 \arguments{
 \item{inputId}{The input slot that will be used to access the value.}
@@ -21,7 +28,7 @@ hover_reload_button(inputId, label, icon = NULL,
 
 \item{icon_animation}{The name of the icon animation.}
 
-\item{width}{The width of the input, e.g. '400px', or '100 percent'; see validateCssUnit().}
+\item{width}{The width of the input, e.g. '400px', or '100\%'; see validateCssUnit().}
 
 \item{...}{Named attributes to be applied to the button or link.}
 }
