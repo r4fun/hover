@@ -1,8 +1,9 @@
 Package: hover
 Title: CSS Animations for 'shiny' Button Elements
-Version: 0.1.0
+Version: 0.1.1.9000
 Authors@R: c(person("Tyler","Littlefield",email="tylerlittlefield@hey.com",role=c("aut","cre"),comment="Creator of Shiny Wrapper"),
-             person("Ian","Lunn",role=c("ctb","cph"),comment="Author of included CSS code"))
+             person("Ian","Lunn",role=c("ctb","cph"),comment="Author of included CSS code"),
+             person("Danube", "Huynhle",role=c("ctb")))
 Description: A wrapper around a CSS library called 'Hover.css', intended for use 
   in 'shiny' applications.
 License: MIT + file LICENSE

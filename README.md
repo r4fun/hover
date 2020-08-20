@@ -10,16 +10,23 @@ hover
 status](https://github.com/r4fun/hover/workflows/R-CMD-check/badge.svg)](https://github.com/r4fun/hover/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/r4fun/hover/branch/master/graph/badge.svg)](https://codecov.io/gh/r4fun/hover?branch=master)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/hover)](https://CRAN.R-project.org/package=hover)
 <!-- badges: end -->
 
 The goal of hover is to add animations to `shiny::actionButton`,
 `shiny::downloadButton`, and `shiny::icon` using
-[Hover.css](https://github.com/IanLunn/Hover).
+[Hover.css](https://github.com/IanLunn/Hover). Additionally, a button to
+refresh web browser is also included.
 
 Installation
 ------------
 
-You can install the development version of hover from GitHub with:
+Install the released version of `hover` from CRAN:
+
+    install.packages("hover")
+
+Or install the development version from GitHub with:
 
     # install.packages("devtools")
     devtools::install_github("r4fun/hover")
