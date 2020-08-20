@@ -32,7 +32,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">hover</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1.9000</span>
       </span>
     </div>
 
@@ -75,37 +75,39 @@
 <a href="#hover" class="anchor"></a>hover</h1></div>
 <!-- badges: start -->
 
-<p>The goal of hover is to add animations to <code><a href="https://shiny.rstudio.com/reference/shiny/latest/actionButton.html">shiny::actionButton</a></code>, <code><a href="https://shiny.rstudio.com/reference/shiny/latest/downloadButton.html">shiny::downloadButton</a></code>, and <code><a href="https://shiny.rstudio.com/reference/shiny/latest/icon.html">shiny::icon</a></code> using <a href="https://github.com/IanLunn/Hover">Hover.css</a>.</p>
+<p>The goal of hover is to add animations to <code><a href="https://shiny.rstudio.com/reference/shiny/latest/actionButton.html">shiny::actionButton</a></code>, <code><a href="https://shiny.rstudio.com/reference/shiny/latest/downloadButton.html">shiny::downloadButton</a></code>, and <code><a href="https://shiny.rstudio.com/reference/shiny/latest/icon.html">shiny::icon</a></code> using <a href="https://github.com/IanLunn/Hover">Hover.css</a>. Additionally, a button to refresh web browser is also included.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the development version of hover from GitHub with:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># install.packages("devtools")</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"r4fun/hover"</span>)</span></code></pre></div>
+<p>Install the released version of <code>hover</code> from CRAN:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">"hover"</span>)</span></code></pre></div>
+<p>Or install the development version from GitHub with:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># install.packages("devtools")</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"r4fun/hover"</span>)</span></code></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
 <p>Animate a button and icon by providing the animation name:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">library</span>(shiny)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">library</span>(hover)</span>
-<span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb2-5"><a href="#cb2-5"></a>  <span class="kw">use_hover</span>(),</span>
-<span id="cb2-6"><a href="#cb2-6"></a>  <span class="kw">hover_action_button</span>(</span>
-<span id="cb2-7"><a href="#cb2-7"></a>    <span class="dt">inputId =</span> <span class="st">"btn"</span>,</span>
-<span id="cb2-8"><a href="#cb2-8"></a>    <span class="dt">label =</span> <span class="st">"hello hover!"</span>,</span>
-<span id="cb2-9"><a href="#cb2-9"></a>    <span class="dt">icon =</span> <span class="kw">icon</span>(<span class="st">"refresh"</span>), </span>
-<span id="cb2-10"><a href="#cb2-10"></a>    <span class="dt">button_animation =</span> <span class="st">"rotate"</span>, </span>
-<span id="cb2-11"><a href="#cb2-11"></a>    <span class="dt">icon_animation =</span> <span class="st">"spin"</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a>  ) </span>
-<span id="cb2-13"><a href="#cb2-13"></a>)</span>
-<span id="cb2-14"><a href="#cb2-14"></a></span>
-<span id="cb2-15"><a href="#cb2-15"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb2-16"><a href="#cb2-16"></a>  </span>
-<span id="cb2-17"><a href="#cb2-17"></a>}</span>
-<span id="cb2-18"><a href="#cb2-18"></a></span>
-<span id="cb2-19"><a href="#cb2-19"></a><span class="kw">shinyApp</span>(ui, server)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">library</span>(shiny)</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="kw">library</span>(hover)</span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
+<span id="cb3-5"><a href="#cb3-5"></a>  <span class="kw">use_hover</span>(),</span>
+<span id="cb3-6"><a href="#cb3-6"></a>  <span class="kw">hover_action_button</span>(</span>
+<span id="cb3-7"><a href="#cb3-7"></a>    <span class="dt">inputId =</span> <span class="st">"btn"</span>,</span>
+<span id="cb3-8"><a href="#cb3-8"></a>    <span class="dt">label =</span> <span class="st">"hello hover!"</span>,</span>
+<span id="cb3-9"><a href="#cb3-9"></a>    <span class="dt">icon =</span> <span class="kw">icon</span>(<span class="st">"refresh"</span>), </span>
+<span id="cb3-10"><a href="#cb3-10"></a>    <span class="dt">button_animation =</span> <span class="st">"rotate"</span>, </span>
+<span id="cb3-11"><a href="#cb3-11"></a>    <span class="dt">icon_animation =</span> <span class="st">"spin"</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a>  ) </span>
+<span id="cb3-13"><a href="#cb3-13"></a>)</span>
+<span id="cb3-14"><a href="#cb3-14"></a></span>
+<span id="cb3-15"><a href="#cb3-15"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
+<span id="cb3-16"><a href="#cb3-16"></a>  </span>
+<span id="cb3-17"><a href="#cb3-17"></a>}</span>
+<span id="cb3-18"><a href="#cb3-18"></a></span>
+<span id="cb3-19"><a href="#cb3-19"></a><span class="kw">shinyApp</span>(ui, server)</span></code></pre></div>
 <p>The <code>hover</code> package essentially takes the <code><a href="https://shiny.rstudio.com/reference/shiny/latest/actionButton.html">shiny::actionButton</a></code> source code and applies the necessary Hover.css classes to make things move.</p>
 </div>
 <div id="acknowledgements" class="section level2">
@@ -128,6 +130,8 @@
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
+<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=hover">https://​cloud.r-project.org/​package=hover</a>
+</li>
 <li>Browse source code at <br><a href="https://github.com/r4fun/hover/">https://​github.com/​r4fun/​hover/​</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/r4fun/hover/issues">https://​github.com/​r4fun/​hover/​issues</a>
@@ -155,6 +159,7 @@
 <ul class="list-unstyled">
 <li><a href="https://github.com/r4fun/hover/actions"><img src="https://github.com/r4fun/hover/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
 <li><a href="https://codecov.io/gh/r4fun/hover?branch=master"><img src="https://codecov.io/gh/r4fun/hover/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://CRAN.R-project.org/package=hover"><img src="https://www.r-pkg.org/badges/version/hover" alt="CRAN status"></a></li>
 </ul>
 </div>
 </div>
