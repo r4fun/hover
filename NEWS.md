@@ -1,4 +1,4 @@
-# hover 0.1.1.9000
+# hover 0.1.1
 
 * Added reload button ([#1](https://github.com/r4fun/hover/pull/1)).
 
